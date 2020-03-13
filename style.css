@@ -1,0 +1,190 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+main {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    position: relative;
+}
+.nav {
+    background: #131313;
+    height: 100%;
+}
+.logo  {
+        display: block;
+        margin-left: 25px;
+        margin-top: 30px;
+        transition: 0.3s;
+    }
+.logo:hover {
+    opacity: 0.7;
+    transition: 0.3s;
+}
+.logoMini {
+    display: block;
+    margin-left: 25px;
+    margin-top: 30px;
+    display: none;
+    transition: 0.3s;
+}
+.logoMini  {
+    opacity: 0.7;
+    transition: 0.3s;
+}
+.burger {
+    position: absolute;
+    top: 100px;
+    left: 217px;
+    width: 24px;
+    height: 10px;
+    z-index: 3;
+    transition: 0.3s;
+}
+.burger:before, 
+.burger:after {
+    content: ' ';
+    background-color: #8C8C8C;
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    left: 0;
+    transition: 0.3s;
+}
+.burger:after {
+    top: 4px;
+    transform: rotate(45deg);
+    transition: 0.3s;
+}
+.burger:before {
+    transform: rotate(-45deg);
+    bottom: 4px;
+    transition: 0.3s;
+}
+.menu {
+    margin-left: 35px;
+    margin-top: 102px;
+}
+.menu__link {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 36px;
+    letter-spacing: 0.1em;
+    color: #8C8C8C;
+    transition: 0.3s;
+}
+.menu__link:hover {
+    color: #FFF;
+    transition: 0.3s;
+}
+.nav__bottom {
+    position: absolute;
+    bottom: 70px;
+    margin-left: 35px;
+}
+.icon {
+    font-size: 24px;
+    line-height: 36px;
+    letter-spacing: 0.5em;
+    color: #8C8C8C;
+    transition: 0.3s;
+}
+.mail,
+.phone {
+    font-family: 'Roboto', sans-serif;
+    display: block;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 36px;
+    letter-spacing: 0.08em;
+    color: #8C8C8C;
+    transition: 0.3s;
+}
+.mail:hover,
+.phone:hover, 
+.icon:hover {
+    color: #fff;
+    transition: 0.3s;
+}
+.rightBlock {
+    background-image: url(img/main-img.png);
+    background-position: right;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+}
+.logoCenter {
+    display: block;
+    position: absolute;
+    right: 50%;
+    top: 50%;
+    transform: translate(63%, -55%);
+    z-index: 2;
+    transition: 0.3s;
+}
+.logoCenter:hover {
+    opacity: 0.7;
+    transition: 0.3s;
+}
+.buttonsWrap {
+    position: absolute;
+    bottom: 72px;
+    right: 7px;
+    padding: 8px; 
+    
+}
+.button {
+    margin-top: 8px;
+    display: block;
+    width: 182px;
+    height: 38px;
+    left: 1169px;
+    top: 603px;
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(250, 250, 250, 0.3);
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 25px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 38px;
+    text-align: center;
+    letter-spacing: 0.1em;
+    color: #FFFFFF;
+}
+.phoneButton {
+    display: block;
+    width: 48px;
+    height: 48px;
+    opacity: 0.7;
+    background: #131313;
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.25);
+    position: absolute;
+    right: 15px;
+    bottom: 25px;
+    border-radius: 50%;
+    background-image: url(img/Vectorphone.png);
+    background-position: center center;
+    background-size: unset;
+    background-repeat: no-repeat;
+}
+.phoneButton:hover {
+    background-image: url(img/cross.png);
+}
+.phoneButton:hover ` .buttonsWrap {
+    display: block;
+}
