@@ -161,6 +161,9 @@ main.active .nav__bottom {
     width: 100%;
     height: 100%;
 }
+.rightBlock_team {
+    
+}
 .logoCenter {
     display: block;
     position: absolute;
@@ -267,6 +270,9 @@ main.active .nav__bottom {
     color: #FFFFFF;
     margin-bottom: 15px;
 }
+.footer {
+    display: flex;
+}
 .container__footer {
     display: flex;
     font-family: 'Roboto', sans-serif;
@@ -278,6 +284,7 @@ main.active .nav__bottom {
     color: #FFFFFF;
     padding: 0;
     position: relative;
+    margin-right: 25px;
 }
 .container__footer:after {
     content: ' ';
@@ -291,6 +298,9 @@ main.active .nav__bottom {
 }
 .container__footer_work:after {
     width: 105px;
+}
+.container__footer_about:after {
+    width: 100%;
 }
 .container__footer:hover {
     color: #8C8C8C;
@@ -330,9 +340,63 @@ main.active .nav__bottom {
     transform: rotate(90deg);
     transition: 0.3s;
 }
+.questions__list:hover {
+    color: #FFF;
+    transition: 0.3s;
+}
+.questions__list:hover:before {
+    transform: scale(0);
+    transition: 0.3s;
+}
+.questions__list:hover:after {
+    background-color: #fff;
+    transition: 0.3s;
+}
+.questions__list:hover .questions_sub {
+    display: block;
+    transition: 0.3s;
+}
+.questions_sub {
+    text-transform: none;
+    margin-top: 7px;
+    display: none;
+    transition: 0.3s;
+}
 .main_about {
     background-image: url(img/about.png);
+}
+.contacts {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 90px 1fr;
+}
+.contacts__p {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 40px;
+    letter-spacing: 0.08em;
+    color: #FFFFFF;
+}
+.contacts__a {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 40px;
+    letter-spacing: 0.08em;
+    color: #FFFFFF;
+}
+.contacts__a:hover {
+    color: #8C8C8C;
 }
 .main_workprocess {
     background-image: url(img/workprocess.png);
 }
+.main__team {
+    background-image: url(img/michail.png);
+    background-position: 70px top;
+    background-size: contain;
+}
+
