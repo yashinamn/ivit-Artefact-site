@@ -22,6 +22,10 @@ main {
 .main_cooperation {
     background-image: url(img/cooperation.png);
 }
+.main_portfolio {
+    background: #FFF;
+    display: block;
+}
 main.active {
     grid-template-columns: 260px 1fr;
     transition: 0.3s;
@@ -30,6 +34,15 @@ main.active {
     background: #131313;
     height: 100%;
     position: relative;
+    z-index: 3;
+}
+
+.nav_portfolio {
+    position: fixed;
+    width: 72px;
+}
+.nav_portfolio.active {
+    width: 260px;
 }
 .logo  {
     display: block;
@@ -162,7 +175,58 @@ main.active .nav__bottom {
     height: 100%;
 }
 .rightBlock_team {
-    
+    display: grid;
+    grid-template-columns: 0.43fr 0.57fr;
+}
+.rightBlock_portfolio {
+    padding: 53px 77px 53px 132px;
+    box-sizing: border-box;
+
+
+}
+.photo {
+    height: 100%;
+    background-image: url(img/michail.png);
+    background-position: right;
+    background-size: cover;
+    background-repeat: no-repeat; 
+    position: relative;   
+}
+.photo_lazutin {
+    background-image: url(img/ivan.png);
+}
+.backButton,
+.forwardButton {
+    display: block;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background:rgba(0, 0, 0, 0.15);
+    border: 2px solid rgba(250, 250, 250, 0.15);
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.backButton {
+    left: 7px;
+}
+.forwardButton {
+    right: 7px;
+}
+.forwardButton__arrow,
+.backButton__arrow {
+    margin: 0 auto;
+    position: relative;
+    top: 19px;
+    left: 17px;
+}
+.backButton__arrow {
+    transform: rotate(180deg);
+}
+.forwardButton__arrow:hover,
+.backButton__arrow:hover {
+    opacity: 0.15;
 }
 .logoCenter {
     display: block;
@@ -186,6 +250,9 @@ main.active .nav__bottom {
 }
 .buttonsWrap.active {
     display: block;
+}
+.buttonsWrap_portfolio {
+    position: fixed;
 }
 .button {
     margin-top: 8px;
@@ -225,6 +292,7 @@ main.active .nav__bottom {
     background-position: center center;
     background-size: unset;
     background-repeat: no-repeat;
+    position: fixed;
 }
 .phoneButton:hover {
     opacity: 1;
@@ -238,6 +306,11 @@ main.active .nav__bottom {
     position: absolute;
     right: 0;
     background: rgba(13, 13, 13, 0.98);
+}
+.textWrap_team {
+    background: #0D0D0D;
+    position: relative;
+    width: 100%;
 }
 .container {
     width: 80%;
@@ -259,6 +332,18 @@ main.active .nav__bottom {
     letter-spacing: 0.4em;
     color: #FFFFFF;
     margin-bottom: 38px;
+    font-weight: normal
+}
+.heading_team {
+    margin-bottom: 10px;
+    margin-top: 31.3%;
+}
+.heading_portfolio {
+    color: #131313;
+}
+.subheading {
+    opacity: 0.7;
+    padding-bottom: 44px;
 }
 .text {
     font-family: 'Roboto', sans-serif;
@@ -399,4 +484,84 @@ main.active .nav__bottom {
     background-position: 70px top;
     background-size: contain;
 }
-
+.portfolioHeader {
+    display: flex;
+    justify-content: space-between;
+}
+.portfolioHeader__list {
+    display: flex;
+}
+.portfolioHeader__link {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 28px;
+    text-align: right;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #131313;
+    opacity: 0.4;
+    text-decoration: underline;
+    margin-right: 10px;
+    transition: 0.3s;
+}
+.portfolioHeader__link:hover {
+    opacity: 1;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.portfolioHeader__link_active {
+    opacity: 1;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    margin-bottom: 53px;
+}
+.gallery__item {
+    padding-bottom: 75%;
+    overflow: hidden;
+    position: relative;
+}
+.gallery__img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    object-position: center;
+}
+.gallery__heading {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 28px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+.gallery__heading:after {
+    content: ' ';
+    width: 28px;
+    height: 4px;
+    background: #FFF;
+    position: absolute;
+    top: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: 0.5s;
+}
+.gallery__heading:hover:after {
+    width: 100%;
+}
