@@ -13,7 +13,7 @@ main {
     background-position: right;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 100vh;
+    min-height: 100vh;
     display: grid;
     grid-template-columns: 72px 1fr;
     position: relative;
@@ -105,16 +105,17 @@ main.active .logoMini {
 }
 .burger.active:after {
     top: 4px;
-    background-color: #8C8C8C;
+    opacity: 0.7;
     transform: rotate(45deg);
     transition: 0.3s;
 }
 .burger.active:before {
-    background-color: #8C8C8C;
+    opacity: 0.7;
     transform: rotate(-45deg);
     bottom: 4px;
     transition: 0.3s;
 }
+
 .menu {
     margin-left: 35px;
     margin-top: 102px;
@@ -252,6 +253,7 @@ main.active .nav__bottom {
     right: 7px;
     padding: 8px; 
     display: none;  
+    z-index: 4;
 }
 .buttonsWrap.active {
     display: block;
@@ -298,6 +300,7 @@ main.active .nav__bottom {
     background-size: unset;
     background-repeat: no-repeat;
     position: fixed;
+    z-index: 5;
 }
 .phoneButton:hover {
     opacity: 1;
@@ -327,6 +330,7 @@ main.active .nav__bottom {
     justify-content: space-between;
     flex-direction: column;
     box-sizing: border-box;
+    outline: 2px solid rgba(250, 250, 250, 0.06);
 }
 .heading {
     font-family: 'Roboto', sans-serif;
@@ -336,7 +340,7 @@ main.active .nav__bottom {
     line-height: 28px;
     letter-spacing: 0.4em;
     color: #FFFFFF;
-    margin-bottom: 38px;
+    margin-bottom: 48px;
     font-weight: normal
 }
 .heading_team {
@@ -581,7 +585,7 @@ main.active .nav__bottom {
 }
 .breadCrumbs {
     display: flex;
-
+    margin-bottom: 11px;
 }
 .breadCrumbs__list {
     padding: 0 11px;
@@ -597,6 +601,9 @@ main.active .nav__bottom {
     top: 50%;
     transform: translateY(-50%);
     right: 0;
+}
+.breadCrumbs__list_last:after {
+    transform: scale(0);
 }
 .breadCrumbs__link {
     font-family: 'Roboto', sans-serif;
@@ -617,3 +624,56 @@ main.active .nav__bottom {
 .breadCrumbs__list_first {
     padding-left: 0;
 }
+.project {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.95);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 4;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    display: none;
+}
+.project:target {
+    display: flex;
+}
+.project__gallery {
+    display: grid;
+    grid-template-columns: 932px 162px;
+    grid-gap: 30px;
+    margin: 0 auto;
+}
+.project__item_left {
+    position: relative;
+    overflow: hidden;
+    height: 674px;
+}
+.project_fullImg {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: none;
+}
+.project_fullImg_active {
+    display: block;
+}
+.project_fullImg:target {
+    display: block;
+}
+.miniImg-wrap {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+}
+.cross {
+    position: fixed;
+    top: 20px;
+    right: 18px;
+    z-index: 4;
+}
+
+
