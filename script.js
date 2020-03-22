@@ -2,7 +2,7 @@
 
 $(document).ready(function () {
     $('.burger').click(function (event) {
-        $('.burger, main, .nav_portfolio').toggleClass('active');
+        $('.burger, main, .nav').toggleClass('active');
     });
 });
 

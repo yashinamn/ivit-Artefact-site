@@ -2,6 +2,10 @@
     padding: 0;
     margin: 0;
 }
+body {
+    background-color: #131313;
+
+}
 a {
     text-decoration: none;
 }
@@ -19,6 +23,10 @@ main {
     position: relative;
     transition: 0.3s;
 }
+main.active {
+    grid-template-columns: 260px 1fr;
+    transition: 0.3s;
+}
 .main_cooperation {
     background-image: url(img/cooperation.png);
 }
@@ -26,22 +34,30 @@ main {
     background: #FFF;
     display: block;
 }
-main.active {
-    grid-template-columns: 260px 1fr;
-    transition: 0.3s;
+.main_faq {
+    background-image: url(img/FAQ.png);
+}
+.main_about {
+    background-image: url(img/about.png);
+}
+.main_workprocess {
+    background-image: url(img/workprocess.png);
+    display: block;
+}
+.main__team {
+    background-image: url(img/michail.png);
+    background-position: 70px top;
+    background-size: contain;
 }
 .nav {
     background: #131313;
     height: 100%;
     position: relative;
     z-index: 3;
-}
-
-.nav_portfolio {
     position: fixed;
     width: 72px;
 }
-.nav_portfolio.active {
+.nav.active {
     width: 260px;
 }
 .logo  {
@@ -115,10 +131,9 @@ main.active .logoMini {
     bottom: 4px;
     transition: 0.3s;
 }
-
 .menu {
     margin-left: 35px;
-    margin-top: 102px;
+    margin-top: 13.3%;
     display: none;
     transition: 0.3s;
 }
@@ -187,13 +202,11 @@ main.active .nav__bottom {
 .rightBlock_portfolio {
     padding: 53px 77px 53px 132px;
     box-sizing: border-box;
-
-
 }
 .photo {
     height: 100%;
     background-image: url(img/michail.png);
-    background-position: right;
+    background-position: center;
     background-size: cover;
     background-repeat: no-repeat; 
     position: relative;   
@@ -314,15 +327,22 @@ main.active .nav__bottom {
     position: absolute;
     right: 0;
     background: rgba(13, 13, 13, 0.98);
+    height: auto;
+    min-height: 100%;
 }
 .textWrap_team {
     background: #0D0D0D;
     position: relative;
     width: 100%;
 }
+.textWrap_faq,
+.textWrap_work {
+    height: auto;
+    min-height: 100%;
+}
 .container {
     width: 80%;
-    height: 100%;
+    min-height: 100vh;
     margin: 0 auto;
     padding-bottom: 10%;
     padding-top: 12%;
@@ -330,7 +350,8 @@ main.active .nav__bottom {
     justify-content: space-between;
     flex-direction: column;
     box-sizing: border-box;
-    outline: 2px solid rgba(250, 250, 250, 0.06);
+    border-left: 2px solid rgba(250, 250, 250, 0.06);
+    border-right: 2px solid rgba(250, 250, 250, 0.06);
 }
 .heading {
     font-family: 'Roboto', sans-serif;
@@ -402,9 +423,6 @@ main.active .nav__bottom {
 .container__footer:hover {
     color: #8C8C8C;
 }
-.main_faq {
-    background-image: url(img/FAQ.png);
-}
 .questions__list {
     font-family: 'Roboto', sans-serif;
     font-style: normal;
@@ -459,9 +477,6 @@ main.active .nav__bottom {
     display: none;
     transition: 0.3s;
 }
-.main_about {
-    background-image: url(img/about.png);
-}
 .contacts {
     margin-top: 50px;
     display: grid;
@@ -487,14 +502,6 @@ main.active .nav__bottom {
 }
 .contacts__a:hover {
     color: #8C8C8C;
-}
-.main_workprocess {
-    background-image: url(img/workprocess.png);
-}
-.main__team {
-    background-image: url(img/michail.png);
-    background-position: 70px top;
-    background-size: contain;
 }
 .portfolioHeader {
     display: flex;
@@ -586,6 +593,7 @@ main.active .nav__bottom {
 .breadCrumbs {
     display: flex;
     margin-bottom: 11px;
+    flex-wrap: wrap;
 }
 .breadCrumbs__list {
     padding: 0 11px;
@@ -636,13 +644,15 @@ main.active .nav__bottom {
     align-items: center;
     align-content: center;
     display: none;
+    padding-top: 7%;
 }
 .project:target {
     display: flex;
 }
 .project__gallery {
+    width: 82.3%;
     display: grid;
-    grid-template-columns: 932px 162px;
+    grid-template-columns: 932fr 162fr;
     grid-gap: 30px;
     margin: 0 auto;
 }
@@ -674,6 +684,110 @@ main.active .nav__bottom {
     top: 20px;
     right: 18px;
     z-index: 4;
+}
+@media screen and (max-width: 769px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+    main.active {
+        grid-template-columns: 1fr;
+    }
+    .menu {
+        margin-top: 2%;
+    }
+    .nav {
+        width: 100%;
+        height: 92px;
+    }
+    .nav.active {
+        width: 100%;
+        height: 400px;
+    }
+    .logoMini {
+        display: none;
+    }
+    main.active .logo{
+        display: inline-block;
+    }
+    .logo {
+        display: inline-block;
+    }
+    .burger {
+        top: 45px;
+    }
+    .rightBlock_portfolio {
+        padding: 120px 25px 25px 25px;
+    }
+    .gallery {
+        grid-template-columns: 1fr 1fr;
+    }
+    .textWrap {
+        width: 100%;
+        min-height: 0;
+    }
+    .container {
+        width: 90%;
+        padding-bottom: 20px;
+        padding-top: 105px;
+        min-height: 0;
+    }
+    .footer {
+        margin-top: 20px;
+    }
+    .heading {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .subheading {
+        text-align: center;
+        padding-bottom: 0;
+    }
+    .rightBlock_team {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr;
+        width: 100%;
+    }
+    .photo {
+        grid-row-start: 2;
+        background-position: top;
+    }
+    .heading_team {
+        margin-top: 5px;
+    }
+    .project__gallery {
+        width: 90%;
+        grid-template-columns: 1fr;
+    }
+    .project__item_right {
+        display: none;
+    }
+    .empty {
+        display: none;
+    }
+}
+@media screen and (max-width: 530px) {
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+    .portfolioHeader {
+        flex-wrap: wrap;
+    }
+    .rightBlock_portfolio {
+        padding: 120px 10px 10px 10px;
+    }
+    .heading {
+        font-size: 20px;
+    }
+    .project_fullImg {
+        top: 20px;
+    }
+    .project__item_left {
+        top: 20%;
+    }
+    .logoCenter {
+        transform: translate(50%, -55%);
+    }
+
 }
 
 
