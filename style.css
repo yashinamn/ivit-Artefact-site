@@ -21,11 +21,11 @@ main {
     display: grid;
     grid-template-columns: 72px 1fr;
     position: relative;
-    transition: 0.3s;
+    transition: all 0.4s ease-out;
 }
 main.active {
     grid-template-columns: 260px 1fr;
-    transition: 0.3s;
+    transition: all 0.4s ease-out;
 }
 .main_cooperation {
     background-image: url(img/cooperation.png);
@@ -56,36 +56,43 @@ main.active {
     z-index: 3;
     position: fixed;
     width: 72px;
+    transition: all 0.4s ease-out;
 }
 .nav.active {
     width: 260px;
+    transition: all 0.4s ease-out;
+}
+.nav__contacts {
+    transition: all 0.6s ease-out;
 }
 .logo  {
     display: block;
     margin-left: 25px;
     margin-top: 30px;
     display: none;
-    transition: 0.3s;
+    transition: all 0.4s ease-out;
 }
 main.active .logo {
     display: block;
+    transition: all 0.4s ease-out;
 }
 .logo:hover {
     opacity: 0.7;
-    transition: 0.3s;
+    transition: all 0.4s ease-out;
 }
 .logoMini {
     display: block;
     margin-left: 25px;
     margin-top: 30px;
-    transition: 0.3s;
+    transition: all 0.4s ease-out;
 }
 main.active .logoMini {
     display: none;
+    transition: all 0.4s ease-out;
 }
 .logoMini:hover  {
     opacity: 0.7;
-    transition: 0.3s;
+    transition: all 0.4s ease-out;
 }
 .burger {
     position: absolute;
@@ -94,12 +101,12 @@ main.active .logoMini {
     width: 24px;
     height: 10px;
     z-index: 3;
-    transition: 0.3s;
+    transition: all 0.4s ease-out;
     cursor: pointer;
 }
 .burger:hover {
     opacity: 0.7;
-    transition: 0.3s;
+    transition: all 0.4s ease-out;
 }
 .burger:before, 
 .burger:after {
@@ -109,37 +116,37 @@ main.active .logoMini {
     height: 2px;
     position: absolute;
     left: 0;
-    transition: 0.3s;
+    transition: all 0.4s ease-out;
 }
 .burger:after {
     top: 0px;
-    transition: 0.3s;
+    transition: all 0.4s ease-out;
 }
 .burger:before {
     bottom: 0px;
-    transition: 0.3s;
+    transition: all 0.4s ease-out;
 }
 .burger.active:after {
     top: 4px;
     opacity: 0.7;
     transform: rotate(45deg);
-    transition: 0.3s;
+    transition: all 0.4s ease-out;
 }
 .burger.active:before {
     opacity: 0.7;
     transform: rotate(-45deg);
     bottom: 4px;
-    transition: 0.3s;
+    transition: all 0.4s ease-out;
 }
 .menu {
     margin-left: 35px;
     margin-top: 13.3%;
     display: none;
-    transition: 0.3s;
+    transition: all 0.4s ease-out;
 }
 main.active .menu {
     display: block;
-    transition: 0.3s;
+    transition: all 0.4s ease-out;
 }
 .menu__link {
     font-family: 'Roboto', sans-serif;
@@ -149,29 +156,29 @@ main.active .menu {
     line-height: 36px;
     letter-spacing: 0.1em;
     color: #8C8C8C;
-    transition: 0.3s;
+    transition: all 0.4s ease-out;
 }
 .menu__link:hover {
     color: #FFF;
-    transition: 0.3s;
+    transition: all 0.4s ease-out;
 }
 .nav__bottom {
     position: absolute;
     bottom: 9%;
     margin-left: 35px;
     display: none;
-    transition: 0.3s;
+    transition: all 0.4s ease-out;
 }
 main.active .nav__bottom {
     display: block;
-    transition: 0.3s;
+    transition: all 0.4s ease-out;
 }
 .icon {
     font-size: 24px;
     line-height: 36px;
     letter-spacing: 0.5em;
     color: #8C8C8C;
-    transition: 0.3s;
+    transition: all 0.4s ease-out;
 }
 .mail,
 .phone {
@@ -183,13 +190,13 @@ main.active .nav__bottom {
     line-height: 36px;
     letter-spacing: 0.08em;
     color: #8C8C8C;
-    transition: 0.3s;
+    transition: all 0.6s ease-out;
 }
 .mail:hover,
 .phone:hover, 
 .icon:hover {
     color: #fff;
-    transition: 0.3s;
+    transition: all 0.6s ease-out;
 }
 .rightBlock {
     width: 100%;
@@ -254,11 +261,11 @@ main.active .nav__bottom {
     top: 50%;
     transform: translate(63%, -55%);
     z-index: 2;
-    transition: 0.3s;
+    transition: all 0.4s ease-out;
 }
 .logoCenter:hover {
     opacity: 0.7;
-    transition: 0.3s;
+    transition: all 0.4s ease-out;
 }
 .buttonsWrap {
     position: absolute;
@@ -267,12 +274,15 @@ main.active .nav__bottom {
     padding: 8px; 
     display: none;  
     z-index: 4;
+    transition: all 0.4s ease-out;
 }
 .buttonsWrap.active {
     display: block;
+    transition: all 0.4s ease-out;
 }
 .buttonsWrap_portfolio {
     position: fixed;
+    transition: all 0.4s ease-out;
 }
 .button {
     margin-top: 8px;
@@ -293,9 +303,11 @@ main.active .nav__bottom {
     text-align: center;
     letter-spacing: 0.1em;
     color: #FFFFFF;
+    transition: all 0.4s ease-out;
 }
 .button:hover {
     border: 1px solid rgba(250, 250, 250, 1);
+    transition: all 0.4s ease-out;
 }
 .phoneButton {
     display: block;
@@ -314,12 +326,15 @@ main.active .nav__bottom {
     background-repeat: no-repeat;
     position: fixed;
     z-index: 5;
+    transition: all 0.4s ease-out;
 }
 .phoneButton:hover {
     opacity: 1;
+    transition: all 0.4s ease-out;
 }
 .phoneButton.active {
     background-image: url(img/cross.png);
+    transition: all 0.4s ease-out;
 }
 .textWrap {
     width: 56%;
@@ -328,7 +343,7 @@ main.active .nav__bottom {
     right: 0;
     background: rgba(13, 13, 13, 0.98);
     height: auto;
-    min-height: 100%;
+    min-height: 100%; 
 }
 .textWrap_team {
     background: #0D0D0D;
@@ -412,7 +427,7 @@ main.active .nav__bottom {
     position: absolute;
     bottom: 1px;
     left: 0;
-    transition: 0.3s; 
+    transition: all 0.4s ease-out;
 }
 .container__footer_work:after {
     width: 105px;
@@ -435,6 +450,7 @@ main.active .nav__bottom {
     padding-left: 24px;
     margin-bottom: 22px;
     position: relative;
+    display: block;
 }
 .questions__list:before, 
 .questions__list:after {
@@ -444,38 +460,45 @@ main.active .nav__bottom {
     height: 2px;
     position: absolute;
     left: 0;
-    transition: 0.3s;
+    transition: all 0.4s ease-out;
 }
 .questions__list:after {
     top: 9px;
-    transition: 0.3s;
+    transition: all 0.4s ease-out;
 }
 .questions__list:before {
     top: 9px;
     transform: rotate(90deg);
-    transition: 0.3s;
+    transition: all 0.4s ease-out;
 }
 .questions__list:hover {
     color: #FFF;
-    transition: 0.3s;
+    transition: all 0.4s ease-out;
 }
 .questions__list:hover:before {
     transform: scale(0);
-    transition: 0.3s;
+    transition: all 0.4s ease-out;
 }
 .questions__list:hover:after {
     background-color: #fff;
-    transition: 0.3s;
+    transition: all 0.4s ease-out;
 }
 .questions__list:hover .questions_sub {
     display: block;
-    transition: 0.3s;
+    transition: all 0.4s ease-out;
 }
-.questions_sub {
+.questions__list_sub {
     text-transform: none;
     margin-top: 7px;
     display: none;
-    transition: 0.3s;
+    transition: all 0.4s ease-out;
+}
+.questions__list_sub:target {
+    display: block;
+}
+.questions__list_sub:target .questions__list {
+    color: #FFF;
+    transition: all 0.4s ease-out;
 }
 .contacts {
     margin-top: 50px;
@@ -523,17 +546,17 @@ main.active .nav__bottom {
     opacity: 0.4;
     text-decoration: underline;
     margin-right: 10px;
-    transition: 0.3s;
+    transition: all 0.4s ease-out;
 }
 .portfolioHeader__link:hover {
     opacity: 1;
     text-decoration: none;
-    transition: 0.3s;
+    transition: all 0.4s ease-out;
 }
 .portfolioHeader__link_active {
     opacity: 1;
     text-decoration: none;
-    transition: 0.3s;
+    transition: all 0.4s ease-out;
 }
 .gallery {
     display: grid;
@@ -546,11 +569,11 @@ main.active .nav__bottom {
     padding-bottom: 75%;
     overflow: hidden;
     position: relative;
-    transition: 0.3s;
+    transition: all 0.4s ease-out;
 }
 .gallery__item_products:hover {
     opacity: 0.8;
-    transition: 0.3s;
+    transition: all 0.4s ease-out;
 }
 .gallery__img {
     position: absolute;
@@ -585,7 +608,7 @@ main.active .nav__bottom {
     top: 120%;
     left: 50%;
     transform: translateX(-50%);
-    transition: 0.5s;
+    transition: all 0.4s ease-out;
 }
 .gallery__heading:hover:after {
     width: 100%;
@@ -636,7 +659,7 @@ main.active .nav__bottom {
     width: 100%;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.95);
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     z-index: 4;
@@ -645,6 +668,7 @@ main.active .nav__bottom {
     align-content: center;
     display: none;
     padding-top: 7%;
+    box-sizing: border-box;
 }
 .project:target {
     display: flex;
@@ -657,15 +681,14 @@ main.active .nav__bottom {
     margin: 0 auto;
 }
 .project__item_left {
-    position: relative;
-    overflow: hidden;
+    position: relative; 
     height: 674px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .project_fullImg {
-    position: absolute;
     width: 100%;
-    top: 0;
-    left: 0;
     display: none;
 }
 .project_fullImg_active {
@@ -694,23 +717,32 @@ main.active .nav__bottom {
     }
     .menu {
         margin-top: 2%;
+        transition: all 0.4s ease-out;
     }
     .nav {
         width: 100%;
         height: 92px;
+        transition: all 0.4s ease-out;
     }
     .nav.active {
         width: 100%;
         height: 400px;
+        transition: all 0.4s ease-out;
+    }
+    .nav__contacts {
+        transition: all 0.6s ease-out;
     }
     .logoMini {
         display: none;
+        transition: all 0.4s ease-out;
     }
     main.active .logo{
         display: inline-block;
+        transition: all 0.4s ease-out;
     }
     .logo {
         display: inline-block;
+        transition: all 0.4s ease-out;
     }
     .burger {
         top: 45px;
@@ -780,9 +812,6 @@ main.active .nav__bottom {
     }
     .project_fullImg {
         top: 20px;
-    }
-    .project__item_left {
-        top: 20%;
     }
     .logoCenter {
         transform: translate(50%, -55%);
