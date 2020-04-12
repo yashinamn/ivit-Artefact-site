@@ -675,32 +675,7 @@ main.active .nav__bottom {
 }
 .project__gallery {
     width: 82.3%;
-    display: grid;
-    grid-template-columns: 932fr 162fr;
-    grid-gap: 30px;
     margin: 0 auto;
-}
-.project__item_left {
-    position: relative; 
-    height: 674px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.project_fullImg {
-    width: 100%;
-    display: none;
-}
-.project_fullImg_active {
-    display: block;
-}
-.project_fullImg:target {
-    display: block;
-}
-.miniImg-wrap {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-gap: 20px;
 }
 .cross {
     position: fixed;
